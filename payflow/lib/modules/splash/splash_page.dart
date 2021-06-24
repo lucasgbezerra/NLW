@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:payflow/shared/auth/auth_controller.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_image.dart';
 
@@ -7,6 +8,10 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Verificando usuario atual na splash screen
+    final authController = AuthController();    
+    authController.currentUser(context);
+
     return Scaffold(
       backgroundColor: AppColors.background,
       //Imagens sobrepostas
