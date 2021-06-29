@@ -25,7 +25,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: 'Pay Flow',
       theme:
-          ThemeData(primaryColor: AppColors.primary, primarySwatch: Colors.red),
+          ThemeData(primaryColor: AppColors.primary, primarySwatch: Colors.orange),
       // home: LoginPage(),
       initialRoute: "/splash",
       //Add rotas nomeadas

@@ -19,7 +19,6 @@ class _HomePageState extends State<HomePage> {
   //Controler da página
   final controller = HomeController();
   //Gerenciar páginas
-  final pages = [];
 
   @override
   Widget build(BuildContext context) {
