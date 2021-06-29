@@ -12,9 +12,6 @@ class BoletoModel {
     this.barcode,
   });
 
-  // Ótima prática de programação
-  // Caso o param seja null passado ele mantem o que estava salvo 
-  // Cria uma copia e gera um novo obj na memoria (mais performatico)
   BoletoModel copyWith({
     String? name,
     String? dueDate,
