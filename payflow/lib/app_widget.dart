@@ -1,40 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:payflow/modules/barcode_scanner/barcode_scanner_page.dart';
+import 'package:payflow/modules/extract_page/extract_page.dart';
 import 'package:payflow/modules/home/home_page.dart';
 import 'package:payflow/modules/insert_boleto.dart/insert_boleto_page.dart';
 import 'package:payflow/modules/splash/splash_page.dart';
+import 'package:payflow/shared/models/user_model.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'modules/login/login_page.dart';
 
 class AppWidget extends StatelessWidget {
-
-  //Travar orientação da tela no construtor 
-  AppWidget(){
+  //Travar orientação da tela no construtor
+  AppWidget() {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitDown,
       DeviceOrientation.portraitUp,
-  ]);
+    ]);
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: AppColors.primary));
   }
-
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Pay Flow',
-      theme: ThemeData(
-        primaryColor: AppColors.primary,
-        primarySwatch: Colors.red
-      ),
+      theme:
+          ThemeData(primaryColor: AppColors.primary, primarySwatch: Colors.red),
       // home: LoginPage(),
       initialRoute: "/splash",
       //Add rotas nomeadas
       routes: {
         "/splash": (context) => SplashPage(),
-        "/home": (context) => HomePage(),
+        //Passando um argumento user atraves de uma rota
+        "/home": (context) => HomePage(
+              user: ModalRoute.of(context)!.settings.arguments as UserModel,
+            ),
         "/login": (context) => LoginPage(),
         "/barcode_scanner": (context) => BarcodeScannerPage(),
-        "/insert_boleto": (context) => InsertBoletoPage(),
+        "/insert_boleto": (context) => InsertBoletoPage(
+              barcode: ModalRoute.of(context) != null ? ModalRoute.of(context)!.settings.arguments.toString() : null,
+            ),
+        "/extract_page": (context) => ExtractPage(),
       },
     );
   }

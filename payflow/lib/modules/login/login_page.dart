@@ -33,27 +33,28 @@ class _LoginPageState extends State<LoginPage> {
                 color: AppColors.primary,
               ),
               Positioned(
-                child: Image.asset(
-                  AppImages.person,
-                  width: 208,
-                  height: 373,
-                ),
+                child: Image.asset(AppImages.person,
+                    width: size.width * 0.55, height: size.height * 0.46),
                 top: size.height * 0.08,
                 left: 0,
                 right: 0,
               ),
               Positioned(
-                bottom: size.height * 0.05,
+                top: size.height * 0.57,
                 left: 0,
                 right: 0,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Image.asset(AppImages.logoMini),
+                    Image.asset(
+                      AppImages.logoMini,
+                      height: size.height * 0.05,
+                      width: 0.2 * size.width,
+                    ),
                     Padding(
                       padding:
-                          const EdgeInsets.only(left: 70, right: 70, top: 24),
+                          EdgeInsets.only(left: 70, right: 70, top: size.height *0.03),
                       child: Text(
                         "Organize seus boletos em um só lugar",
                         style: AppTextStyles.titleHome,
@@ -61,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 40, top: 40),
+                      padding: EdgeInsets.only(left: 40, right: 40, top: size.height *0.05),
                       child: SocialLoginButton(
                         onTap: () {
                           controller.googleSignIn(context);

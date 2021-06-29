@@ -43,6 +43,11 @@ class AppTextStyles{
     fontWeight: FontWeight.w400,
     color: AppColors.primary
   );
+  static final input = GoogleFonts.inter(
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    color: AppColors.inputs
+  );
   static final buttonHeading = GoogleFonts.inter(
     fontSize: 15,
     fontWeight: FontWeight.w400,
@@ -63,32 +68,32 @@ class AppTextStyles{
     fontWeight: FontWeight.w700,
     color: AppColors.heading
   );
-  static final captionBackground = GoogleFonts.lexendDeca(
+  static final captionBackground = GoogleFonts.inter(
     fontSize: 13,
     fontWeight: FontWeight.w400,
     color: AppColors.background
   );
-  static final captionBoxes = GoogleFonts.lexendDeca(
+  static final captionBoxes = GoogleFonts.inter(
     fontSize: 13,
     fontWeight: FontWeight.w400,
     color: AppColors.boxes
   );
-  static final captionBody = GoogleFonts.lexendDeca(
+  static final captionBody = GoogleFonts.inter(
     fontSize: 13,
     fontWeight: FontWeight.w400,
     color: AppColors.body
   );
-  static final captionBoldBackground = GoogleFonts.lexendDeca(
+  static final captionBoldBackground = GoogleFonts.inter(
     fontSize: 13,
     fontWeight: FontWeight.w600,
     color: AppColors.background
   );
-   static final captionBoldBoxes = GoogleFonts.lexendDeca(
+   static final captionBoldBoxes = GoogleFonts.inter(
     fontSize: 13,
     fontWeight: FontWeight.w600,
     color: AppColors.boxes
   );
-  static final captionBoldBody = GoogleFonts.lexendDeca(
+  static final captionBoldBody = GoogleFonts.inter(
     fontSize: 13,
     fontWeight: FontWeight.w600,
     color: AppColors.body
